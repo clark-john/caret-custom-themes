@@ -23,7 +23,7 @@ function thisThing(){
 C# Syntax:
 ```csharp
 using System;
-nvamespace synt {
+namespace synt {
   class example {
     static void Main(String[] args){
       string thisString = "C# Syntax";
