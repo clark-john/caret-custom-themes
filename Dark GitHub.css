@@ -29,11 +29,6 @@ This is the first version of this .css file. You can request some changes to thi
   color: #fff;
 }
 
-:root {
-  --link-color: #286DBE;
-}
-
-
 .content {
   max-width: 890px;
 }
@@ -46,7 +41,7 @@ This is the first version of this .css file. You can request some changes to thi
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
-  color: rgb(48, 143, 253);
+  color: #328FF9;  
 }
 
 a:active,
@@ -55,7 +50,7 @@ a:hover {
 }
 
 a:visited {
-  color: rgb(48, 143, 253);
+  color: #328FF9;
 }
 
 strong {
@@ -143,7 +138,7 @@ input {
 }
 
 a[href] {
-  color: rgb(48, 143, 253);
+  color: #328FF9;
   text-decoration: none;
 }
 
