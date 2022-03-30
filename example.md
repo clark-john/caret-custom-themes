@@ -34,7 +34,7 @@ namespace synt {
 }
 ```
 **Highlighting:** <br>
-Install psygopg2 by typing <code>pip install psycopg2 </code>
+Install psycopg2 by typing <code>pip install psycopg2 </code>
 
 **Link:** <br>
 Download [Swift](https://www.swift.org/download/)
