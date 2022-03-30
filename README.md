@@ -1,5 +1,5 @@
-# Custom Theme for Caret Beta
-Custom Theme for **Caret Beta**
+# Custom Theme for Caret
+Custom Theme for **Caret**
 
 Feel free to use this theme if you want.
 
