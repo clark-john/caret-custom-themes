@@ -1,0 +1,739 @@
+/*
+I usually just modified the .css file from Github.css into Dark theme that is built-in by Caret.
+
+You can change the font if you want.
+  Changing the font: 
+    1). Use @import or @font-face property. It's up to you what you're using.
+    2). Change the font-family in the :host selector. You can change other elements' font by navigating them. (Find and Replace)
+    3). Save your .css file
+    4). Change theme in Caret and change it back to this theme to take effect.
+
+This is the first version of this .css file. You can request some changes to this file and make new versions.
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:host {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+  background: rgb(23, 24, 28);
+  color: #fff;
+}
+
+.content {
+  max-width: 890px;
+}
+
+.katex-display {
+  padding: 0.6rem 0;
+  overflow-x: auto;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  color: #328FF9;  
+    &[href] {
+      color: #328FF9;
+      text-decoration: none;
+      img {
+      border-bottom: none;
+      outline: none;
+      text-decoration: none;
+      border-width: 0px;
+      outline-width: 0px;
+      border: 0;
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+strong {
+  font-weight: bolder;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+code,
+kbd,
+.content > pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+input {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-color: rgb(36, 37, 42);
+  color: #fff;
+  overflow: visible;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #242424;
+  color: white;
+  border-color: #303030;
+  &:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+}
+
+[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  &::before {
+    display: table;
+    content: "";
+  }
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 21px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+h6 {
+  font-size: 11px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+blockquote {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol ol,
+ul ol {
+  list-style-type: lower-roman;
+}
+
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+dd {
+  margin-left: 0;
+}
+
+code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.content > pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.pl-1 {
+  padding-left: 3px !important;
+}
+
+.pl-2 {
+  padding-left: 6px !important;
+}
+
+.pl-3 {
+  padding-left: 12px !important;
+}
+
+.pl-4 {
+  padding-left: 24px !important;
+}
+
+.pl-5 {
+  padding-left: 36px !important;
+}
+
+.pl-6 {
+  padding-left: 48px !important;
+}
+
+.form-select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+  &:active,
+  &:hover {
+    outline-width: 0;
+  }
+  &:visited {
+    color: #328FF9;
+  }
+}
+
+.anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+  &:focus {
+    outline: none;
+  }
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+  .octicon-link {
+    color: #000;
+    vertical-align: middle;
+    visibility: hidden;    
+  }
+  &:hover {
+    .anchor {
+      text-decoration: none;
+      .octicon-link {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+
+h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+  .anchor {
+    line-height: 1;
+  }
+}
+
+h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+  .anchor {
+    line-height: 1;
+  }
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+  .anchor {
+    line-height: 1.2;
+  }
+}
+
+h4 {
+  font-size: 1.25em;
+  .anchor {
+    line-height: 1.2;
+  }
+}
+
+h5 {
+  font-size: 1em;
+  .anchor {
+    line-height: 1.1;
+  }
+}
+
+h6 {
+  font-size: 1em;
+  color: #777;
+  .anchor {
+    line-height: 1.1;
+  }
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+.content > pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+ul,
+ol {
+  padding-left: 2em;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li>p {
+  margin-top: 16px;
+}
+
+dl {
+  padding: 0;
+  dt {
+    padding: 0;
+    margin-top: 16px;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: bold;
+  }
+  dd {
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+}
+
+
+
+blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+  & > &:first-child {
+    margin-top: 0;
+  }
+  & > &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+  th {
+    font-weight: bold;
+  }
+  th, td {
+    padding: 6px 13px;
+    border: 1px solid rgb(64, 66, 78);
+  }
+  tr {
+    background-color: rgb(23, 24, 28);
+    border-top: 1px solid #ccc;
+    &:nth-child(2n) {
+      background-color: rgb(36, 37, 42);
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: rgb(23, 24, 28);
+}
+
+code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgb(36, 37, 42);
+  border-radius: 7px;
+  &:before, &:after {
+    letter-spacing: -0.2em;
+    content: "\00a0";    
+  }
+}
+
+pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: #000;
+  border: 0;
+}
+
+.highlight {
+  margin-bottom: 16px;
+  pre {
+    margin-bottom: 0;
+    word-break: normal;    
+  }
+}
+
+.highlight pre,
+.content > pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: rgb(36, 37, 42);
+  border-radius: 3px;
+  word-wrap: normal;
+}
+
+pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+  &:before, &:after {
+    content: normal;
+  }
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+  // display: inline-block;
+  // padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  // color: #555;
+  // vertical-align: middle;
+  // background-color: #fcfcfc;
+  // border: solid 1px #ccc;
+  // border-bottom-color: #bbb;
+  // border-radius: 3px;
+  // box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.pl-c {
+  color: #969896;
+}
+
+.pl-c1,
+.pl-s .pl-v {
+  color: #0086b3;
+}
+.pl-v {
+  color: #ed6a43;
+}
+
+.pl-e,
+.pl-en {
+  color: #795da3;
+}
+
+.pl-s .pl-s1,
+.pl-smi {
+  color: #333;
+}
+
+.pl-ent {
+  color: #63a35c;
+}
+
+.pl-k {
+  color: #a71d5d;
+}
+
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+  color: #183691;
+}
+
+
+.pl-id {
+  color: #b52a1d;
+}
+
+.pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.pl-ml {
+  color: #693a17;
+}
+
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.pl-mq {
+  color: #008080;
+}
+
+.pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.pl-mo {
+  color: #1d3e81;
+}
+
+
+
+.full-commit .btn-outline:not(:disabled):hover {
+  color: #4078c0;
+  border: 1px solid #4078c0;
+}
+
+:checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #4078c0;
+}
+
+.octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
+
+.task-list-item {
+  list-style-type: none;
+  & input {
+    margin: 0 0.2em 0.25em -1.6em;
+    vertical-align: middle;
+  }
+  .task-list-item {
+    margin-top: 3px;
+  }
+}
+
+hr {
+  border-bottom-color: #eee;
+}
+
+/* Code
+   ---------------- */
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #aaa;
+}
+
+.token.operator,
+.token.punctuation {
+  color: #888;
+}
+
+.token.selector,
+.token.attr-name,
+.token.entity,
+.token.url {
+  color: #987;
+}
+
+.token.tag,
+.token.constant,
+.token.keyword {
+  color: #a7a;
+}
+
+.token.function,
+.token.attr-value {
+  color: #68a;
+}
+
+.token.number,
+.token.boolean,
+.token.regex,
+.token.string {
+  color: #6a8;
+}
+
+.token.variable,
+.token.property,
+.token.key {
+  color: #a66;
+}
+
+
+/*
+Dark GitHub v1.0.0
+A customized preview theme for Caret Beta or any versions.
+© 2022 by John Clark
+*/

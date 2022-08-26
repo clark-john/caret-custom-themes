@@ -1,0 +1,14 @@
+{
+  "name": "caret-custom-themes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/clark-john/caret-custom-themes",
+  "author": "Clark <daprogrammer1@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "sass": "^1.54.5"
+  }
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 I usually just modified the .css file from Github.css into Dark theme that is built-in by Caret.
 
@@ -11,13 +12,11 @@ You can change the font if you want.
 This is the first version of this .css file. You can request some changes to this file and make new versions.
 
 */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :host {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 1.6;
   word-wrap: break-word;
@@ -37,20 +36,27 @@ This is the first version of this .css file. You can request some changes to thi
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
-  color: #328FF9;  
-}
-
-a:active,
-a:hover {
-  outline-width: 0;
-}
-
-a:visited {
   color: #328FF9;
-}
-
-strong {
-  font-weight: inherit;
+  &:active,
+  &:hover {
+    text-decoration: underline;
+    outline-width: 0;
+  }
+  &:visited {
+    color: #328FF9;
+  }
+  &[href] {
+    color: #328FF9;
+    text-decoration: none;
+    img {
+      border-bottom: none;
+      outline: none;
+      text-decoration: none;
+      border-width: 0px;
+      outline-width: 0px;
+      border: 0;
+    }
+  }
 }
 
 strong {
@@ -84,33 +90,31 @@ hr {
 }
 
 input {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   background-color: rgb(36, 37, 42);
   color: #fff;
-}
-
-input {
   overflow: visible;
 }
 
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
 button {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #242424;
   color: white;
   border-color: #303030;
+  &[type=button],
+  &[type=reset],
+  &[type=submit] {
+    &:-moz-focusring {
+      outline: 1px dotted ButtonText;
+    }
+  }
+  &:-moz-focusring {
+    outline: 1px dotted ButtonText;   
+  } 
 }
 
-
-
-[type="checkbox"] {
+[type=checkbox] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -133,26 +137,6 @@ input {
   font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-a[href] {
-  color: #328FF9;
-  text-decoration: none;
-}
-
-a[href] img {
-  border-bottom: none;
-  outline: none;
-  text-decoration: none;
-  border-width: 0px;
-  outline-width: 0px;
-  border: 0;
-}
-
-
-a:hover,
-a:active {
-  text-decoration: underline;
-}
-
 hr {
   height: 0;
   margin: 15px 0;
@@ -160,18 +144,18 @@ hr {
   background: transparent;
   border: 0;
   border-bottom: 1px solid #ddd;
+  &::before {
+    display: table;
+    content: "";
+  }
+
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
 }
 
-hr::before {
-  display: table;
-  content: "";
-}
-
-hr::after {
-  display: table;
-  clear: both;
-  content: "";
-}
 
 h1,
 h2,
@@ -294,11 +278,11 @@ code {
   content: "";
 }
 
-.markdown-body>*:first-child {
+.markdown-body > *:first-child {
   margin-top: 0 !important;
 }
 
-.markdown-body>*:last-child {
+.markdown-body > *:last-child {
   margin-bottom: 0 !important;
 }
 
@@ -327,35 +311,17 @@ h6 {
   margin-bottom: 16px;
   font-weight: bold;
   line-height: 1.4;
-}
-
-h1 .octicon-link,
-h2 .octicon-link,
-h3 .octicon-link,
-h4 .octicon-link,
-h5 .octicon-link,
-h6 .octicon-link {
-  color: #000;
-  vertical-align: middle;
-  visibility: hidden;
-}
-
-h1:hover .anchor,
-h2:hover .anchor,
-h3:hover .anchor,
-h4:hover .anchor,
-h5:hover .anchor,
-h6:hover .anchor {
-  text-decoration: none;
-}
-
-h1:hover .anchor .octicon-link,
-h2:hover .anchor .octicon-link,
-h3:hover .anchor .octicon-link,
-h4:hover .anchor .octicon-link,
-h5:hover .anchor .octicon-link,
-h6:hover .anchor .octicon-link {
-  visibility: visible;
+  .octicon-link {
+    color: #000;
+    vertical-align: middle;
+    visibility: hidden;
+  }
+  &:hover .anchor {
+    text-decoration: none;
+    .octicon-link {
+      visibility: visible;
+    }
+  }
 }
 
 h1 {
@@ -363,10 +329,9 @@ h1 {
   font-size: 2.25em;
   line-height: 1.2;
   border-bottom: 1px solid #eee;
-}
-
-h1 .anchor {
-  line-height: 1;
+  .anchor {
+    line-height: 1;
+  }
 }
 
 h2 {
@@ -374,44 +339,39 @@ h2 {
   font-size: 1.75em;
   line-height: 1.225;
   border-bottom: 1px solid #eee;
-}
-
-h2 .anchor {
-  line-height: 1;
+  .anchor {
+    line-height: 1;
+  }
 }
 
 h3 {
   font-size: 1.5em;
   line-height: 1.43;
-}
-
-h3 .anchor {
-  line-height: 1.2;
+  .anchor {
+    line-height: 1.2;
+  }
 }
 
 h4 {
   font-size: 1.25em;
-}
-
-h4 .anchor {
-  line-height: 1.2;
+  .anchor {
+    line-height: 1.2;
+  }
 }
 
 h5 {
   font-size: 1em;
-}
-
-h5 .anchor {
-  line-height: 1.1;
+  .anchor {
+    line-height: 1.1;
+  }
 }
 
 h6 {
   font-size: 1em;
   color: #777;
-}
-
-h6 .anchor {
-  line-height: 1.1;
+  .anchor {
+    line-height: 1.1;
+  }
 }
 
 p,
@@ -446,7 +406,7 @@ ol ul {
   margin-bottom: 0;
 }
 
-li>p {
+li > p {
   margin-top: 16px;
 }
 
@@ -473,11 +433,11 @@ blockquote {
   border-left: 4px solid #ddd;
 }
 
-blockquote>:first-child {
+blockquote > :first-child {
   margin-top: 0;
 }
 
-blockquote>:last-child {
+blockquote > :last-child {
   margin-bottom: 0;
 }
 
@@ -527,7 +487,7 @@ code {
 code:before,
 code:after {
   letter-spacing: -0.2em;
-  content: "\00a0";
+  content: " ";
 }
 
 pre > code {
@@ -542,6 +502,10 @@ pre > code {
 
 .highlight {
   margin-bottom: 16px;
+  pre {
+    margin-bottom: 0;
+    word-break: normal;
+  }
 }
 
 .highlight pre,
@@ -552,11 +516,6 @@ pre > code {
   line-height: 1.45;
   background-color: rgb(36, 37, 42);
   border-radius: 3px;
-}
-
-.highlight pre {
-  margin-bottom: 0;
-  word-break: normal;
 }
 
 .content > pre {
@@ -573,11 +532,10 @@ pre code {
   word-wrap: normal;
   background-color: transparent;
   border: 0;
-}
-
-pre code:before,
-pre code:after {
-  content: normal;
+  &:before,
+  &:after {
+    content: normal;
+  }
 }
 
 kbd {
@@ -592,6 +550,7 @@ kbd {
   border-bottom-color: #bbb;
   border-radius: 3px;
   box-shadow: inset 0 -1px 0 #bbb;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 .pl-c {
@@ -693,26 +652,13 @@ kbd {
   color: #1d3e81;
 }
 
-kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  line-height: 10px;
-  color: #555;
-  vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
-  border-bottom-color: #bbb;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #bbb;
-}
 
 .full-commit .btn-outline:not(:disabled):hover {
   color: #4078c0;
   border: 1px solid #4078c0;
 }
 
-:checked+.radio-label {
+:checked + .radio-label {
   position: relative;
   z-index: 1;
   border-color: #4078c0;
@@ -726,15 +672,13 @@ kbd {
 
 .task-list-item {
   list-style-type: none;
-}
-
-.task-list-item+.task-list-item {
-  margin-top: 3px;
-}
-
-.task-list-item input {
-  margin: 0 0.2em 0.25em -1.6em;
-  vertical-align: middle;
+  & + .task-list-item {
+    margin-top: 3px;
+  }
+  .input {
+    margin: 0 0.2em 0.25em -1.6em;
+    vertical-align: middle;
+  }
 }
 
 hr {
@@ -743,7 +687,6 @@ hr {
 
 /* Code
    ---------------- */
-
 .token.comment,
 .token.prolog,
 .token.doctype,
@@ -786,7 +729,6 @@ hr {
 .token.key {
   color: #a66;
 }
-
 
 /*
 Dark GitHub v1.0.0
